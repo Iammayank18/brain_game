@@ -44,7 +44,7 @@ const Game = () => {
     setCards(
       newCards.map((value) => ({
         value,
-        flipped: false
+        flipped: false,
       }))
     );
   };
@@ -134,24 +134,24 @@ const Game = () => {
     autoplay: true,
     animationData: require("./failed.json"), // Provide the animation JSON path
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
   const defaultOptionsWin = {
     loop: true,
     autoplay: true,
     animationData: require("./win_game.json"), // Provide the animation JSON path
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (
     <div className="game">
-      <h1>Memory Matching Game</h1>
+      <h1>Card Matching Game 🔀</h1>
       <Space
         style={{
-          flexWrap: "wrap"
+          flexWrap: "wrap",
         }}
       >
         {!isGameStarted ? (
@@ -168,20 +168,20 @@ const Game = () => {
               options={[
                 {
                   value: "4",
-                  label: "Easy (4 cards)"
+                  label: "Easy (4 cards)",
                 },
                 {
                   value: "8",
-                  label: "Medium (8 cards)"
+                  label: "Medium (8 cards)",
                 },
                 {
                   value: "12",
-                  label: "Hard (12 cards)"
+                  label: "Hard (12 cards)",
                 },
                 {
                   value: "16",
-                  label: "Very Hard (16 cards)"
-                }
+                  label: "Very Hard (16 cards)",
+                },
               ]}
             />
 
@@ -197,28 +197,28 @@ const Game = () => {
               options={[
                 {
                   value: "10",
-                  label: "10"
+                  label: "10",
                 },
                 {
                   value: "20",
-                  label: "20"
+                  label: "20",
                 },
                 {
                   value: "30",
-                  label: "30 (Recommended)"
+                  label: "30 (Recommended)",
                 },
                 {
                   value: "40",
-                  label: "40"
+                  label: "40",
                 },
                 {
                   value: "50",
-                  label: "50"
+                  label: "50",
                 },
                 {
                   value: "60",
-                  label: "60"
-                }
+                  label: "60",
+                },
               ]}
             />
             <Button
@@ -246,7 +246,7 @@ const Game = () => {
                 className="site-badge-count-109"
                 count={score === 0 ? "0" : score}
                 style={{
-                  backgroundColor: "#52c41a"
+                  backgroundColor: "#52c41a",
                 }}
               />
             </p>
@@ -256,7 +256,7 @@ const Game = () => {
                 className="site-badge-count-109"
                 count={attempts === 0 ? "0" : attempts}
                 style={{
-                  backgroundColor: "red"
+                  backgroundColor: "red",
                 }}
               />
             </p>
@@ -271,14 +271,14 @@ const Game = () => {
       ) : (
         <div
           style={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           <p
             style={{
               fontSize: 20,
               fontWeight: 600,
-              fontFamily: "poppins"
+              fontFamily: "poppins",
             }}
           >
             Start the game
@@ -294,14 +294,14 @@ const Game = () => {
       >
         <div
           style={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           <p
             style={{
               fontSize: 20,
               fontWeight: 600,
-              fontFamily: "poppins"
+              fontFamily: "poppins",
             }}
           >
             Yay! you won the game<span>🥳</span>
@@ -318,14 +318,14 @@ const Game = () => {
       >
         <div
           style={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           <p
             style={{
               fontSize: 20,
               fontWeight: 600,
-              fontFamily: "poppins"
+              fontFamily: "poppins",
             }}
           >
             Lag gyi na! <span>🤣</span>
